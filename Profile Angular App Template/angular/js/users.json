@@ -1,0 +1,12 @@
+ [
+    {
+      "username":"HelloWorld",
+      "shortname":"Hello_World",
+      "password": "qwerty"    
+    },
+    {
+      "username":"John",
+      "shortname":"John",
+      "password": "password"    
+    }
+  ]
