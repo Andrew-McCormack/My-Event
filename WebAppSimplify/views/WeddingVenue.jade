@@ -1,0 +1,126 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='stylesheets/mystyle.css')
+    title Modern Business - Start Bootstrap Template
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='home') iEvent
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='home') Home
+            li
+              a(href='about') About
+            li
+              a(href='index') Services
+            li
+              a(href='contact') Contact
+        // /.navbar-collapse
+      // /.container
+    // Header Carousel
+    header#myCarousel.carousel.slide
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      // Wrapper for slides
+      .carousel-inner
+        .item.active
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide One');")
+          .carousel-caption
+            h2 Caption 1
+        .item
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');")
+          .carousel-caption
+            h2 Caption 2
+        .item
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');")
+          .carousel-caption
+            h2 Caption 3
+      // Controls
+      a.left.carousel-control(href='#myCarousel', data-slide='prev')
+        span.icon-prev
+      a.right.carousel-control(href='#myCarousel', data-slide='next')
+        span.icon-next
+    // Page Content
+    .container
+      .row
+        .col-md-3
+          p.lead
+            br
+            br
+            | Wedding
+          .list-group
+            a.list-group-item.active(href='#') Venue
+            a.list-group-item(href='WeddingBands') Bands
+            a.list-group-item(href='checkout') Checkout
+        .col-md-9(style='top:80px;')
+          .thumbnail
+            img.img-responsive(src='images/thedeandublin5.jpg', style='width:800px;height:300px;', alt='')
+            .caption-full
+              h4.pull-right €115
+              h4
+                a(href='#') The Dean
+              p
+                | We don’t do conventional. We do fun. Super cool & comfortable rooms filled with stuff that will make you smile. Spaces for work & play. Food & drink to tweet home about. Smack bang in the heart of Dublin city.
+              p
+                | See more snippets and reviews at 
+                a(target='_blank', href='http://deandublin.ie/') The Dean, Dublin
+                | .
+            .ratings
+              p
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star-empty
+                |                             4.0 stars
+            a.btn.btn-default(href='#') Book Now
+          .thumbnail
+            img.img-responsive(src='images/The-Odeon-Dublin1.jpg', style='width:800px;height:300px;', alt='')
+            .caption-full
+              h4.pull-right €120
+              h4
+                a(href='#') Odeon Nite Bar
+              p
+                | Since reopening its doors in late 2012 after an extensive renovation, The Odeon Bar has quickly built a reputation for being the go-to venue for evening drinks in the capital. The Bar opens Monday to Friday from 12pm until late and Saturday & Bank Holiday Sunday from 4pm until late.
+              p
+                | See more snippets and reviews at 
+                a(target='_blank', href='http://odeon.ie/') Odeon Nite Bar, Dublin
+                | .
+            .ratings
+              p
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star
+                span.glyphicon.glyphicon-star-empty
+                |                             4.0 stars
+            a.btn.btn-default(href='#') Book Now
+    // /.container
+    // jQuery
+    script(src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')
+    // Script to Activate the Carousel
+    script.
+      $('.carousel').carousel({
+      interval: 5000 //changes the speed
+      })

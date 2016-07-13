@@ -1,0 +1,199 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // jQuery
+    script(src='javascripts/jquery.js')
+    link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    title Modern Business - Start Bootstrap Template
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='home') iEvent
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='home') Home
+            li
+              a(href='about') About
+            li.active
+              a(href='index') Services
+            li
+              a(href='contact') Contact
+        // /.navbar-collapse
+      // /.container
+    // Header Carousel
+    header#myCarousel.carousel.slide
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      // Wrapper for slides
+      .carousel-inner
+        .item.active
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide One');")
+          .carousel-caption
+            h2 Caption 1
+        .item
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');")
+          .carousel-caption
+            h2 Caption 2
+        .item
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');")
+          .carousel-caption
+            h2 Caption 3
+      // Controls
+      a.left.carousel-control(href='#myCarousel', data-slide='prev')
+        span.icon-prev
+      a.right.carousel-control(href='#myCarousel', data-slide='next')
+        span.icon-next
+    // Page Content
+    .container
+      // Marketing Icons Section
+      .row
+        .col-lg-12
+          h1.page-header
+            br
+            |                     Create An Event in Less Than 20 minutes! 
+            br
+            br
+        .col-md-4
+          .panel.panel-default
+            .panel-heading
+              h4
+                i.fa.fa-fw.fa-check
+                | Birthdays
+            .panel-body
+              p
+                | Create an event for birthday celebrations. Book your venues, bands, catering type all within minutes and invite your friends to the event!
+              // Pop Up
+              .center
+                button.btn.btn-primary.center-block(data-toggle='modal', data-target='#squarespaceModal') Book Now
+              // line modal
+              #squarespaceModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      button.close(type='button', data-dismiss='modal')
+                        span(aria-hidden='true') ×
+                        span.sr-only Close
+                      h3#lineModalLabel.modal-title When's the big day?
+                    .modal-body
+                      // content goes here
+                      form
+                        .form-group
+                          label(for='exampleInputEmail1') Date of the Event
+                          input#exampleInputDate.form-control(type='date', placeholder='Enter the Date')
+                        .form-group
+                          label(for='exampleInputPassword1') Time
+                          input#exampleInputTime.form-control(type='time', placeholder='Enter a Time')
+                    .modal-footer
+                      .btn-group.btn-group-justified(role='group', aria-label='group button')
+                        .btn-group(role='group')
+                          button.btn.btn-default(type='button', data-dismiss='modal', role='button') Close
+                        .btn-group.btn-delete.hidden(role='group')
+                          button#delImage.btn.btn-default.btn-hover-red(type='button', data-dismiss='modal', role='button') Delete
+                        .btn-group(role='group')
+                          a(href='BirthdayVenue')
+                            button.btn.btn-default(type='submit', name='save1') Save
+              // Pop Up End
+        .col-md-4
+          .panel.panel-default
+            .panel-heading
+              h4
+                i.fa.fa-fw.fa-gift
+                | Weddings
+            .panel-body
+              p
+                | Our app can ease the hassle of organising a wedding. Simply choose your choose your preferred church, wedding venue and wedding band. The wedding venue will then get in touch regarding the meals that will served and will set up a date to come down to sample their meals for the wedding.
+              // <a href="WeddingVenue" class="btn btn-default">Learn More</a>
+              // Pop Up
+              .center
+                button.btn.btn-primary.center-block(data-toggle='modal', data-target='#squarespaceModal') Book Now
+              // line modal
+              #squarespaceModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      button.close(type='button', data-dismiss='modal')
+                        span(aria-hidden='true') ×
+                        span.sr-only Close
+                      h3#lineModalLabel.modal-title When's the big day?
+                    .modal-body
+                      // content goes here
+                      form
+                        .form-group
+                          label(for='exampleInputEmail1') Date of the Wedding
+                          input#exampleInputDate.form-control(type='date', placeholder='Enter the Date')
+                        .form-group
+                          label(for='exampleInputPassword1') Time
+                          input#exampleInputTime.form-control(type='time', placeholder='Enter a Time')
+                    .modal-footer
+                      .btn-group.btn-group-justified(role='group', aria-label='group button')
+                        .btn-group(role='group')
+                          button.btn.btn-default(type='button', data-dismiss='modal', role='button') Close
+                        .btn-group.btn-delete.hidden(role='group')
+                          button#delImage.btn.btn-default.btn-hover-red(type='button', data-dismiss='modal', role='button') Delete
+                        .btn-group(role='group')
+                          a(href='WeddingVenue')
+                            button.btn.btn-default(type='submit', name='save2') Save
+              // Pop Up End
+        .col-md-4
+          .panel.panel-default
+            .panel-heading
+              h4
+                i.fa.fa-fw.fa-compass
+                | Gigs
+            .panel-body
+              p
+                | If you are an event organiser this app will help you set up an event wihtin a few minutes without getting in contact with venues or anything like that. Simply book your venue from the selection provided and invite your friends to come along!
+              // Pop Up
+              .center
+                button.btn.btn-primary.center-block(data-toggle='modal', data-target='#squarespaceModal') Book Now
+              // line modal
+              #squarespaceModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      button.close(type='button', data-dismiss='modal')
+                        span(aria-hidden='true') ×
+                        span.sr-only Close
+                      h3#lineModalLabel.modal-title When's the big day?
+                    .modal-body
+                      // content goes here
+                      form
+                        .form-group
+                          label(for='exampleInputEmail1') Date of the Gig
+                          input#exampleInputDate.form-control(type='date', placeholder='Enter the Date')
+                        .form-group
+                          label(for='exampleInputPassword1') Time
+                          input#exampleInputTime.form-control(type='time', placeholder='Enter a Time')
+                    .modal-footer
+                      .btn-group.btn-group-justified(role='group', aria-label='group button')
+                        .btn-group(role='group')
+                          button.btn.btn-default(type='button', data-dismiss='modal', role='button') Close
+                        .btn-group.btn-delete.hidden(role='group')
+                          button#delImage.btn.btn-default.btn-hover-red(type='button', data-dismiss='modal', role='button') Delete
+                        .btn-group(role='group')
+                          a(href='WeddingVenue')
+                            button.btn.btn-default(type='submit', href='WeddingVenue') Save
+              // Pop Up End
+      // /.row
+      // Script to Activate the Carousel
+      script.
+        $('.carousel').carousel({
+        interval: 5000 //changes the speed
+        })

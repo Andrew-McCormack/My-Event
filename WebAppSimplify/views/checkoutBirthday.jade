@@ -1,0 +1,109 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script(type='text/javascript', src='https://www.simplify.com/commerce/v1/simplify.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='stylesheets/.mystyle.css')
+    title Modern Business - Start Bootstrap Template
+  body
+    
+    h4
+      a(href='#') Checkout
+                
+      form#simplify-payment-form(action='/payment', method='POST')
+        div
+          label Credit Card Number: 
+          input#cc-number(type='text', maxlength='20', autocomplete='off', value='', autofocus='')
+        div
+          label CVC: 
+          input#cc-cvc(type='text', maxlength='4', autocomplete='off', value='')
+        div
+          label Expiry Date: 
+          select#cc-exp-month
+            option(value='01') Jan
+            option(value='02') Feb
+            option(value='03') Mar
+            option(value='04') Apr
+            option(value='05') May
+            option(value='06') Jun
+            option(value='07') Jul
+            option(value='08') Aug
+            option(value='09') Sep
+            option(value='10') Oct
+            option(value='11') Nov
+            option(value='12') Dec
+          select#cc-exp-year
+            option(value='13') 2013
+            option(value='14') 2014
+            option(value='15') 2015
+            option(value='16') 2016
+            option(value='17') 2017
+            option(value='18') 2018
+            option(value='19') 2019
+            option(value='20') 2020
+            option(value='21') 2021
+            option(value='22') 2022
+      button#process-payment-btn(type='submit') Process Payment
+script(type='text/javascript').
+  function simplifyResponseHandler(data) {
+  var $paymentForm = $("#simplify-payment-form");
+  // Remove all previous errors
+  $(".error").remove();
+  // Check for errors
+  if (data.error) {
+  // Show any validation errors
+    if (data.error.code == "validation") {
+      var fieldErrors = data.error.fieldErrors,
+      fieldErrorsLength = fieldErrors.length,
+      errorList = "";
+      for (var i = 0; i < fieldErrorsLength; i++) {
+      errorList += "<div class='error'>Field: '" + fieldErrors[i].field +
+      "' is invalid - " + fieldErrors[i].message + "</div>";
+      }
+      // Display the errors
+      $paymentForm.after(errorList);
+      }
+      // Re-enable the submit button
+      $("#process-payment-btn").removeAttr("disabled");
+      } else {
+      // The token contains id, last4, and card type
+      var token = data["id"];
+      // Insert the token into the form so it gets submitted to the server
+      $paymentForm.append("<input type='hidden' name='simplifyToken' value='" + token + "' />");
+      // Submit the form to the server
+      window.alert(token);
+      $paymentForm.get(0).submit();
+      }
+      }
+      $(document).ready(function() {
+      $("#simplify-payment-form").on("submit", function() {
+      // Disable the submit button
+      $("#process-payment-btn").attr("disabled", "disabled");
+      // Generate a card token & handle the response
+      SimplifyCommerce.generateToken({
+      key: "sbpb_YWI3NWQ4MzgtODhmMC00NzgyLTgzNzItYzY0NzZmNjVjYTNl",
+      card: {
+      number: $("#cc-number").val(),
+      cvc: $("#cc-cvc").val(),
+      expMonth: $("#cc-exp-month").val(),
+      expYear: $("#cc-exp-year").val()
+      }
+      }, simplifyResponseHandler);
+      // Prevent the form from submitting
+      return false;
+      });
+      });             
+    // jQuery
+    script(src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')
+    // Script to Activate the Carousel
+    script.
+      $('.carousel').carousel({
+      interval: 5000 //changes the speed
+      })

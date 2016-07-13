@@ -1,0 +1,118 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    script(src='/javascripts/global.js')
+    //link(rel='stylesheet', type='text/css', href='stylesheets/mystyle.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    title Modern Business - Start Bootstrap Template
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='home') iEvent
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='home') Home
+            li
+              a(href='about') About
+            li
+              a(href='index') Services
+            li
+              a(href='contact') Contact
+        // /.navbar-collapse
+      // /.container
+    // Header Carousel
+    header#myCarousel.carousel.slide
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      // Wrapper for slides
+      .carousel-inner
+        .item.active
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide One');")
+          .carousel-caption
+            h2 Caption 1
+        .item
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');")
+          .carousel-caption
+            h2 Caption 2
+        .item
+          .fill(style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');")
+          .carousel-caption
+            h2 Caption 3
+      // Controls
+      a.left.carousel-control(href='#myCarousel', data-slide='prev')
+        span.icon-prev
+      a.right.carousel-control(href='#myCarousel', data-slide='next')
+        span.icon-next
+    // Page Content
+    .container
+      // Marketing Icons Section
+      .row
+        .col-lg-12
+          h1.page-header
+            br
+            center
+              | Register 
+              br
+              br
+        div
+          p
+            center
+              | iEvent allows you to create an event within minutes! Simply follow the steps by choosing the date, time and location of the event and we will provide you with options for bands, venues, catering and invites for your event. It's as simple as that!
+          br
+          
+          // Wrapper
+          #wrapper
+              // USER LIST
+              h2 User List
+              #userlist
+                  table
+                      thead
+                          th UserName
+                          th Email
+                          th Delete?
+                      tbody
+              // /USER LIST
+              #addUser
+                  fieldset
+                      input#inputUserName(type='text', placeholder='Username')
+                      input#inputUserEmail(type='text', placeholder='Email')
+                      br
+                      input#inputUserFullname(type='text', placeholder='Full Name')
+                      input#inputUserAge(type='text', placeholder='Age')
+                      br
+                      input#inputUserLocation(type='text', placeholder='Location')
+                      input#inputUserGender(type='text', placeholder='gender')
+                      br
+                      button#btnAddUser Add User
+                      // /ADD USER
+                  br
+                  br
+        // jQuery
+        script(src='js/jquery.js')
+        // Bootstrap Core JavaScript
+        script(src='js/bootstrap.min.js')
+        // Script to Activate the Carousel
+        script.
+          $('.carousel').carousel({
+          interval: 5000 //changes the speed
+          })
+
+
