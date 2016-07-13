@@ -24,19 +24,19 @@ html(lang='en')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             // Basket
-            li.dropdown.menu-large
-              a#dLabel.dropdown-toggle(href='#', data-toggle='dropdown')
-                span.glyphicon.glyphicon-shopping-cart
-                |  Basket 
-                b.caret
-              ul.dropdown-menu.megamenu
-                .col-sm-12.clearfix
-                  .simpleCart_items
-                  ul#cart.clearfix
-                  li.divider
-                  .btn-group.pull-right
-                    a.simpleCart_empty.btn.btn-lg.btn-danger(href='#') Clear Cart
-                    a.simpleCart_checkout.btn.btn-lg.btn-success(href='#') Checkout Now
+            //li.dropdown.menu-large
+            //  a#dLabel.dropdown-toggle(href='#', data-toggle='dropdown')
+            //    span.glyphicon.glyphicon-shopping-cart
+            //    |  Basket 
+            //    b.caret
+            //  ul.dropdown-menu.megamenu
+            //    .col-sm-12.clearfix
+            //      .simpleCart_items
+            //      ul#cart.clearfix
+            //      li.divider
+            //      .btn-group.pull-right
+            //        a.simpleCart_empty.btn.btn-lg.btn-danger(href='#') Clear Cart
+            //        a.simpleCart_checkout.btn.btn-lg.btn-success(href='#') Checkout Now
             // Basket End
             li
               a(href='home') Home
@@ -86,6 +86,10 @@ html(lang='en')
             a.list-group-item.active(href='#') Venue
             a.list-group-item(href='BirthdayBand') Bands
             a.list-group-item(href='checkoutBirthday') Checkout
+            .thumbnail
+              .panel-body
+                | Date: 07/22/2016 </br>
+                | Time: 06:00 PM
         .col-md-9(style='top:80px;')
           .thumbnail
             img.img-responsive(src='images/thedeandublin5.jpg', style='max-width:100%;height:auto;', alt='')
