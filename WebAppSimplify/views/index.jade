@@ -74,46 +74,6 @@ html(lang='en')
           .panel.panel-default
             .panel-heading
               h4
-                i.fa.fa-fw.fa-check
-                | Birthdays
-            .panel-body
-              p
-                | Create an event for birthday celebrations. Book your venues, bands, catering type all within minutes and invite your friends to the event!
-              // Pop Up
-              .center
-                button.btn.btn-primary.center-block(data-toggle='modal', data-target='#squarespaceModal') Book Now
-              // line modal
-              #squarespaceModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
-                .modal-dialog
-                  .modal-content
-                    .modal-header
-                      button.close(type='button', data-dismiss='modal')
-                        span(aria-hidden='true') ×
-                        span.sr-only Close
-                      h3#lineModalLabel.modal-title When's the big day?
-                    .modal-body
-                      // content goes here
-                      form
-                        .form-group
-                          label(for='exampleInputEmail1') Date of the Event
-                          input#exampleInputDate.form-control(type='date', placeholder='Enter the Date')
-                        .form-group
-                          label(for='exampleInputPassword1') Time
-                          input#exampleInputTime.form-control(type='time', placeholder='Enter a Time')
-                    .modal-footer
-                      .btn-group.btn-group-justified(role='group', aria-label='group button')
-                        .btn-group(role='group')
-                          button.btn.btn-default(type='button', data-dismiss='modal', role='button') Close
-                        .btn-group.btn-delete.hidden(role='group')
-                          button#delImage.btn.btn-default.btn-hover-red(type='button', data-dismiss='modal', role='button') Delete
-                        .btn-group(role='group')
-                          a(href='BirthdayVenue')
-                            button.btn.btn-default(type='submit', name='save1') Save
-              // Pop Up End
-        .col-md-4
-          .panel.panel-default
-            .panel-heading
-              h4
                 i.fa.fa-fw.fa-gift
                 | Weddings
             .panel-body
