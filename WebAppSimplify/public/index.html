@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html">iEvent</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="active">
+                        <a href="index.html">Services</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 1</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"><br>
+                    Create An Event in Less Than 20 minutes! <br><br>
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i>Birthdays</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Create an event for birthday celebrations. Book your venues, bands, catering type all within minutes and invite your friends to the event!</p>
+                        <!--Pop Up-->
+                            <div class="center"><button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary center-block">Book Now</button></div>
+
+                            <!-- line modal -->
+                            <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                        <h3 class="modal-title" id="lineModalLabel">When's the big day?</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                        <!-- content goes here -->
+                                        <form>
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">Date of the Event</label>
+                                            <input type="date" class="form-control" id="exampleInputDate" placeholder="Enter the Date">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputPassword1">Time</label>
+                                            <input type="time" class="form-control" id="exampleInputTime" placeholder="Enter a Time">
+                                          </div>
+                                          
+                                        </form>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Close</button>
+                                            </div>
+                                            <div class="btn-group btn-delete hidden" role="group">
+                                                <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"  role="button">Delete</button>
+                                            </div>
+                                            <div class="btn-group" role="group">
+                                                <a href="BirthdayVenue.html" ><button type="submit" class="btn btn-default" name="save1">Save</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!--Pop Up End-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gift"></i>Weddings</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Our app can ease the hassle of organising a wedding. Simply choose your choose your preferred church, wedding venue and wedding band. The wedding venue will then get in touch regarding the meals that will served and will set up a date to come down to sample their meals for the wedding.</p>
+                        <!--<a href="WeddingVenue.html" class="btn btn-default">Learn More</a>-->
+
+                        <!--Pop Up-->
+                            <div class="center"><button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary center-block">Book Now</button></div>
+
+                            <!-- line modal -->
+                            <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                        <h3 class="modal-title" id="lineModalLabel">When's the big day?</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                        <!-- content goes here -->
+                                        <form>
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">Date of the Wedding</label>
+                                            <input type="date" class="form-control" id="exampleInputDate" placeholder="Enter the Date">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputPassword1">Time</label>
+                                            <input type="time" class="form-control" id="exampleInputTime" placeholder="Enter a Time">
+                                          </div>
+                                          
+                                        </form>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Close</button>
+                                            </div>
+                                            <div class="btn-group btn-delete hidden" role="group">
+                                                <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"  role="button">Delete</button>
+                                            </div>
+                                            <div class="btn-group" role="group">
+                                                <a href="WeddingVenue.html" ><button type="submit" class="btn btn-default" name="save2">Save</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!--Pop Up End-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-compass"></i>Gigs</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>If you are an event organiser this app will help you set up an event wihtin a few minutes without getting in contact with venues or anything like that. Simply book your venue from the selection provided and invite your friends to come along!</p>
+                        <!--Pop Up-->
+                            <div class="center"><button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary center-block">Book Now</button></div>
+
+                            <!-- line modal -->
+                            <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                        <h3 class="modal-title" id="lineModalLabel">When's the big day?</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                        <!-- content goes here -->
+                                        <form>
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">Date of the Gig</label>
+                                            <input type="date" class="form-control" id="exampleInputDate" placeholder="Enter the Date">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputPassword1">Time</label>
+                                            <input type="time" class="form-control" id="exampleInputTime" placeholder="Enter a Time">
+                                          </div>
+                                          
+                                        </form>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Close</button>
+                                            </div>
+                                            <div class="btn-group btn-delete hidden" role="group">
+                                                <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"  role="button">Delete</button>
+                                            </div>
+                                            <div class="btn-group" role="group">
+                                                <a href="WeddingVenue.html" ><button type="submit" class="btn btn-default" href="WeddingVenue.html">Save</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        <!--Pop Up End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+       
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>
