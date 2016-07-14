@@ -4,11 +4,9 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    // jQuery
-    script(src='javascripts/jquery.js')
     link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
-    title iEvent
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/javascripts/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    title Modern Business - Start Bootstrap Template
   body
     // Navigation
     nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
@@ -20,7 +18,8 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='home') iEvent
+          a.navbar-brand(href='home')
+            img(src='images/LogoS.png')
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
@@ -35,6 +34,8 @@ html(lang='en')
         // /.navbar-collapse
       // /.container
     // Header Carousel
+    br
+    br
     header#myCarousel.carousel.slide
       // Indicators
       ol.carousel-indicators
@@ -102,8 +103,6 @@ html(lang='en')
                           input#exampleInputTime.form-control(type='time', placeholder='Enter a Time')
                     .modal-footer
                       .btn-group.btn-group-justified(role='group', aria-label='group button')
-                        .btn-group(role='group')
-                          button.btn.btn-default(type='button', data-dismiss='modal', role='button') Close
                         .btn-group.btn-delete.hidden(role='group')
                           button#delImage.btn.btn-default.btn-hover-red(type='button', data-dismiss='modal', role='button') Delete
                         .btn-group(role='group')
@@ -122,9 +121,9 @@ html(lang='en')
               // <a href="WeddingVenue" class="btn btn-default">Learn More</a>
               // Pop Up
               .center
-                button.btn.btn-primary.center-block(data-toggle='modal', data-target='#squarespaceModal') Book Now
+                button.btn.btn-primary.center-block(data-toggle='modal', data-target='#squarespaceModal2') Book Now
               // line modal
-              #squarespaceModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
+              #squarespaceModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
                 .modal-dialog
                   .modal-content
                     .modal-header
@@ -143,8 +142,6 @@ html(lang='en')
                           input#exampleInputTime.form-control(type='time', placeholder='Enter a Time')
                     .modal-footer
                       .btn-group.btn-group-justified(role='group', aria-label='group button')
-                        .btn-group(role='group')
-                          button.btn.btn-default(type='button', data-dismiss='modal', role='button') Close
                         .btn-group.btn-delete.hidden(role='group')
                           button#delImage.btn.btn-default.btn-hover-red(type='button', data-dismiss='modal', role='button') Delete
                         .btn-group(role='group')
@@ -162,9 +159,9 @@ html(lang='en')
                 | If you are an event organiser this app will help you set up an event wihtin a few minutes without getting in contact with venues or anything like that. Simply book your venue from the selection provided and invite your friends to come along!
               // Pop Up
               .center
-                button.btn.btn-primary.center-block(data-toggle='modal', data-target='#squarespaceModal') Book Now
+                button.btn.btn-primary.center-block(data-toggle='modal', data-target='#squarespaceModal3') Book Now
               // line modal
-              #squarespaceModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
+              #squarespaceModal3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
                 .modal-dialog
                   .modal-content
                     .modal-header
@@ -192,6 +189,10 @@ html(lang='en')
                             button.btn.btn-default(type='submit', href='WeddingVenue') Save
               // Pop Up End
       // /.row
+      // jQuery
+      script(src='javascripts/jquery.js')
+      // Bootstrap Core JavaScript
+      script(src='javascripts/bootstrap.min.js')
       // Script to Activate the Carousel
       script.
         $('.carousel').carousel({

@@ -5,9 +5,9 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/javascripts/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
     link(rel='stylesheet', type='text/css', href='stylesheets/mystyle.css')
-    title iEvent
+    title Modern Business - Start Bootstrap Template
   body
     // Navigation
     nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
@@ -19,24 +19,25 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='home') iEvent
+          a.navbar-brand(href='home')
+            img(src='images/LogoS.png')
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             // Basket
-            //li.dropdown.menu-large
-            //  a#dLabel.dropdown-toggle(href='#', data-toggle='dropdown')
-            //    span.glyphicon.glyphicon-shopping-cart
-            //    |  Basket 
-            //    b.caret
-            //  ul.dropdown-menu.megamenu
-            //    .col-sm-12.clearfix
-            //      .simpleCart_items
-            //      ul#cart.clearfix
-            //      li.divider
-            //      .btn-group.pull-right
-            //        a.simpleCart_empty.btn.btn-lg.btn-danger(href='#') Clear Cart
-            //        a.simpleCart_checkout.btn.btn-lg.btn-success(href='#') Checkout Now
+            li.dropdown.menu-large
+              a#dLabel.dropdown-toggle(href='#', data-toggle='dropdown')
+                span.glyphicon.glyphicon-shopping-cart
+                |  Basket 
+                b.caret
+              ul.dropdown-menu.megamenu
+                .col-sm-12.clearfix
+                  .simpleCart_items
+                  ul#cart.clearfix
+                  li.divider
+                  .btn-group.pull-right
+                    a.simpleCart_empty.btn.btn-lg.btn-danger(href='#') Clear Cart
+                    a.simpleCart_checkout.btn.btn-lg.btn-success(href='#') Checkout Now
             // Basket END
             li
               a(href='home') Home
@@ -49,6 +50,8 @@ html(lang='en')
         // /.navbar-collapse
       // /.container
     // Header Carousel
+    br
+    br
     header#myCarousel.carousel.slide
       // Indicators
       ol.carousel-indicators
@@ -86,13 +89,9 @@ html(lang='en')
             a.list-group-item(href='BirthdayVenue') Venue
             a.list-group-item.active(href='#') Bands
             a.list-group-item(href='checkoutBirthday') Checkout
-            .thumbnail
-              .panel-body
-                | Date: 07/22/2016 </br>
-                | Time: 06:00 PM
         .col-md-9(style='top:80px;')
           .thumbnail
-            img.img-responsive(src='images/fangclub.jpg', style='max-width:100%;height:auto;', alt='')
+            img.img-responsive(src='images/fangclub.jpg', style='width:800px;height:300px;', alt='')
             .caption-full
               h4.pull-right €115
               h4
@@ -113,7 +112,7 @@ html(lang='en')
                 |                             4.0 stars
             a.btn.btn-default(href='#') Book Now
           .thumbnail
-            img.img-responsive(src='images/divineinvention.jpg', style='max-width:100%;height:auto;', alt='')
+            img.img-responsive(src='images/divineinvention.jpg', style='width:800px;height:300px;', alt='')
             .caption-full
               h4.pull-right €120
               h4
@@ -134,7 +133,7 @@ html(lang='en')
                 |                             4.0 stars
             a.btn.btn-default(href='#') Book Now
           .thumbnail
-            img.img-responsive(src='images/funkybuskers.jpg', style='max-width:100%;height:auto;', alt='')
+            img.img-responsive(src='images/funkybuskers.jpg', style='width:800px;height:300px;', alt='')
             .caption-full
               h4.pull-right €120
               h4
@@ -156,10 +155,12 @@ html(lang='en')
             a.btn.btn-default(href='#') Book Now
     // /.container
     // jQuery
-    script(src='js/jquery.js')
+    script(src='javascripts/jquery.js')
     // Bootstrap Core JavaScript
-    script(src='js/bootstrap.min.js')
-    script(src='js/my.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/my.js')
+    script(src='javascripts/angular.min.js')
+    script(src='javascripts/app.js')
     // Script to Activate the Carousel
     script.
       $('.carousel').carousel({

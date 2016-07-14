@@ -5,10 +5,10 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/javascripts/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
     meta(name='description', content='')
     meta(name='author', content='')
-    title iEvent
+    title Modern Business - Start Bootstrap Template
   body
     // Navigation
     nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
@@ -20,7 +20,8 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='home') iEvent
+          a.navbar-brand(href='home')
+            img(src='images/LogoS.png')
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
@@ -34,6 +35,8 @@ html(lang='en')
               a(href='contact') Contact
         // /.navbar-collapse
       // /.container
+    br
+    br
     // Page Content
     .container
       // Page Heading/Breadcrumbs
@@ -41,18 +44,62 @@ html(lang='en')
         .col-lg-12
           h1.page-header
             br
-            | Services
-           
+            | About Us
           ol.breadcrumb
             li
               a(href='index') Home
-            li.active Services
+            li.active About Us
       // /.row
       // Image Header
       .row
         .col-lg-12
-          img.img-responsive(src='http://placehold.it/1200x300', alt='')
-    
+          img.img-responsive(src='images/Logo.png', alt='')
+      // /.row
+      // Service Panels
+      // The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/
+      .row
+        .col-lg-12
+          h2.page-header Services Panels
+        .col-md-3.col-sm-6
+          .panel.panel-default.text-center
+            .panel-heading
+              span.fa-stack.fa-5x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-tree.fa-stack-1x.fa-inverse
+            .panel-body
+              h4 Service One
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.btn.btn-primary(href='#') Learn More
+        .col-md-3.col-sm-6
+          .panel.panel-default.text-center
+            .panel-heading
+              span.fa-stack.fa-5x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-car.fa-stack-1x.fa-inverse
+            .panel-body
+              h4 Service Two
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.btn.btn-primary(href='#') Learn More
+        .col-md-3.col-sm-6
+          .panel.panel-default.text-center
+            .panel-heading
+              span.fa-stack.fa-5x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-support.fa-stack-1x.fa-inverse
+            .panel-body
+              h4 Service Three
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.btn.btn-primary(href='#') Learn More
+        .col-md-3.col-sm-6
+          .panel.panel-default.text-center
+            .panel-heading
+              span.fa-stack.fa-5x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-database.fa-stack-1x.fa-inverse
+            .panel-body
+              h4 Service Four
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              a.btn.btn-primary(href='#') Learn More
       // Service Tabs
       .row
         .col-lg-12
@@ -62,28 +109,142 @@ html(lang='en')
             li.active
               a(href='#service-one', data-toggle='tab')
                 i.fa.fa-tree
-                |  Welcome to iEvent
+                |  Service One
             li
-              a(href='#Our.Services', data-toggle='tab')
+              a(href='#service-two', data-toggle='tab')
                 i.fa.fa-car
-                |  Our Services
+                |  Service Two
+            li
+              a(href='#service-three', data-toggle='tab')
+                i.fa.fa-support
+                |  Service Three
+            li
+              a(href='#service-four', data-toggle='tab')
+                i.fa.fa-database
+                |  Service Four
           #myTabContent.tab-content
             #service-one.tab-pane.fade.active.in
-              h4 Welcome to iEvent
+              h4 Service One
               p
-                | iEvent allows for customers to create events big or small within minutes. We specialise in Internet-related services in the fields of venues, bands and catering. We allow for easy comparison between multiple companies to find the best value for you! 
-            #Our.Services.tab-pane.fade
-              h4 Our Services
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.
               p
-                | We can help create any event you wish. We have basic formats for birthdays, band gigs and even weddings! Once you create the event we have customized your searches to appeal to your needs. For example, for weddings we have narrowed the search to weddings band around the the area. HOwever, this search is not limit as you have access to search all regions and you can even choose the genre of music you may want from pop, rock, jazz or even metal. We don't descriminate :)
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.
+            #service-two.tab-pane.fade
+              h4 Service Two
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.
+            #service-three.tab-pane.fade
+              h4 Service Three
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.
+            #service-four.tab-pane.fade
+              h4 Service Four
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.
+      // Service List
+      // The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/
+      .row
+        .col-lg-12
+          h2.page-header Service List
+        .col-md-4
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-tree.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service One
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-car.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service Two
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-support.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service Three
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+        .col-md-4
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-database.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service Four
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-bomb.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service Five
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-bank.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service Six
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+        .col-md-4
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-paper-plane.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service Seven
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-space-shuttle.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service Eight
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+          .media
+            .pull-left
+              span.fa-stack.fa-2x
+                i.fa.fa-circle.fa-stack-2x.text-primary
+                i.fa.fa-recycle.fa-stack-1x.fa-inverse
+            .media-body
+              h4.media-heading Service Nine
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.
+      // /.row
       hr
       // Footer
       footer
         .row
           .col-lg-12
-            p Copyright © iEvent 2016
+            p Copyright © Your Website 2014
     // /.container
     // jQuery
-    script(src='js/jquery.js')
+    script(src='javascripts/jquery.js')
     // Bootstrap Core JavaScript
-    script(src='js/bootstrap.min.js')
+    script(src='javascripts/bootstrap.min.js')

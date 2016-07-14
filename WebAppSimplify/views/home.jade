@@ -5,11 +5,10 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/javascripts/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
     link(rel='stylesheet', type='text/css', href='stylesheets/mystyle.css')
-    title iEvent
+    title Modern Business - Start Bootstrap Template
   body
-    // Navigation
     nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
       .container
         // Brand and toggle get grouped for better mobile display
@@ -19,7 +18,8 @@ html(lang='en')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='home') iEvent
+          a.navbar-brand(href='home')
+            img(src='images/LogoS.png')
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
@@ -34,6 +34,8 @@ html(lang='en')
         // /.navbar-collapse
       // /.container
     // Header Carousel
+    br
+    br
     header#myCarousel.carousel.slide
       // Indicators
       ol.carousel-indicators
@@ -69,16 +71,14 @@ html(lang='en')
             center
               | Welcome to iEvent! 
               br
-              br
         div
           p
             center
               | iEvent allows you to create an event within minutes! Simply follow the steps by choosing the date, time and location of the event and we will provide you with options for bands, venues, catering and invites for your event. It's as simple as that!
-          br
         .omb_login
           h3.omb_authTitle
             | Login or 
-            a(href='SignUp') Sign up
+            a(href='#') Sign up
           .row.omb_row-sm-offset-3.omb_socialButtons
             .col-xs-4.col-sm-2
               a.btn.btn-lg.btn-block.omb_btn-facebook(href='#')
@@ -109,6 +109,7 @@ html(lang='en')
                     i.fa.fa-lock
                   input.form-control(type='password', name='password', placeholder='Password')
                 // <span class="help-block">Password error</span>
+                br
                 button.btn.btn-lg.btn-primary.btn-block(type='submit') Login
           .row.omb_row-sm-offset-3
             .col-xs-12.col-sm-3
@@ -121,9 +122,9 @@ html(lang='en')
                 br
                 br
         // jQuery
-        script(src='js/jquery.js')
+        script(src='javascripts/jquery.js')
         // Bootstrap Core JavaScript
-        script(src='js/bootstrap.min.js')
+        script(src='javascripts/bootstrap.min.js')
         // Script to Activate the Carousel
         script.
           $('.carousel').carousel({
