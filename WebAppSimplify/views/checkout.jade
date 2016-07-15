@@ -1,143 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script(type='text/javascript', src='https://www.simplify.com/commerce/v1/simplify.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='stylesheets/mystyle.css')
+  body      
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='home') iEvent
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='home') Home
+            li
+              a(href='about') About
+            li
+              a(href='index') Services
+            li
+              a(href='contact') Contact
+        // /.navbar-collapse
+      // /.container
+    // Page Content
+    .container
 
-<head>
+        br
+        br
+        br
+        br
+        fieldset
+          legend Payment
+          .form-group
+            form#simplify-payment-form(action='payment', method='POST')
+              label.col-sm-3.control-label(for='card-holder-name') Card Holder Name
+              .col-sm-9
+                input#cc-name.form-control(type='text', maxlength='20', placeholder='Card Holder Name')
+              label.col-sm-3.control-label(for='card-holder-number') Card Number
+              .col-sm-9
+                input#cc-number.form-control(type='text', maxlength='20', placeholder='Debit/Credit Card Number')
+              label.col-sm-3.control-label(for='card-holder-cvc') CVC
+              .col-sm-9
+                input#cc-cvc.form-control(type='text', maxlength='4', placeholder='CVC')
+              label.col-sm-3.control-label(for='card-holder-expirydate') Expiry Date
+              .col-sm-9
+                select#cc-exp-month
+                  option(value='01') Jan
+                  option(value='02') Feb
+                  option(value='03') Mar
+                  option(value='04') Apr
+                  option(value='05') May
+                  option(value='06') Jun
+                  option(value='07') Jul
+                  option(value='08') Aug
+                  option(value='09') Sep
+                  option(value='10') Oct
+                  option(value='11') Nov
+                  option(value='12') Dec
+                select#cc-exp-year
+                  option(value='13') 2013
+                  option(value='14') 2014
+                  option(value='15') 2015
+                  option(value='16') 2016
+                  option(value='17') 2017
+                  option(value='18') 2018
+                  option(value='19') 2019
+                  option(value='20') 2020
+                  option(value='21') 2021
+                  option(value='22') 2022
+              label.col-sm-3.control-label(for='card-holder-submit') 
+              br
+              br
+              button#process-payment-btn(type='submit') Process Payment
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/javascripts/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/mystyle.css">
-
-    <title>Modern Business - Start Bootstrap Template</title>
-
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="home"><img src="images/LogoS.png" ></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="home">Home</a>
-                    </li>
-                    <li>
-                        <a href="about">About</a>
-                    </li>
-                    <li>
-                        <a href="index">Services</a>
-                    </li>
-                    <li>
-                        <a href="contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Header Carousel -->
-    <BR><BR><header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
-
-    <!-- Page Content -->
-<div class="container">
-
-        <div class="row">
-
-            <div class="col-md-3">
-                <p class="lead"><br><br>Wedding</p>
-                <div class="list-group">
-                    <a href="WeddingVenue" class="list-group-item">Venue</a>
-                    <a href="WeddingBands" class="list-group-item">Bands</a>
-                    <a href="checkout" class="list-group-item active">Checkout</a>
-                </div>
-            </div>
-
-            <div class="col-md-9" style="top:80px;">
-
-
-
-                
-
-            </div>
-
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-
-
-
-
-       
-    <!-- jQuery -->
-    <script src="javascripts/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="javascripts/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-
-</body>
-
-</html>
+script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script(type='text/javascript', src='https://www.simplify.com/commerce/v1/simplify.js')
+    script(type='text/javascript').
+      function simplifyResponseHandler(data) {
+      var $paymentForm = $("#simplify-payment-form");
+      // Remove all previous errors
+      $(".error").remove();
+      // Check for errors
+      if (data.error) {
+      // Show any validation errors
+      if (data.error.code == "validation") {
+      var fieldErrors = data.error.fieldErrors,
+      fieldErrorsLength = fieldErrors.length,
+      errorList = "";
+      for (var i = 0; i < fieldErrorsLength; i++) {
+      errorList += "<div class='error'>Field: '" + fieldErrors[i].field +
+      "' is invalid - " + fieldErrors[i].message + "</div>";
+      }
+      // Display the errors
+      $paymentForm.after(errorList);
+      }
+      // Re-enable the submit button
+      $("#process-payment-btn").removeAttr("disabled");
+      } else {
+      // The token contains id, last4, and card type
+      var token = data["id"];
+      // Insert the token into the form so it gets submitted to the server
+      $paymentForm.append("<input type='hidden' name='simplifyToken' value='" + token + "' />");
+      // Submit the form to the server
+      $paymentForm.get(0).submit();
+      }
+      }
+      $(document).ready(function() {
+      $("#simplify-payment-form").on("submit", function() {
+      // Disable the submit button
+      $("#process-payment-btn").attr("disabled", "disabled");
+      // Generate a card token & handle the response
+      SimplifyCommerce.generateToken({
+      key: "sbpb_YWI3NWQ4MzgtODhmMC00NzgyLTgzNzItYzY0NzZmNjVjYTNl",
+      card: {
+      number: $("#cc-number").val(),
+      cvc: $("#cc-cvc").val(),
+      expMonth: $("#cc-exp-month").val(),
+      expYear: $("#cc-exp-year").val()
+      }
+      }, simplifyResponseHandler);
+      // Prevent the form from submitting
+      return false;
+      });
+      });

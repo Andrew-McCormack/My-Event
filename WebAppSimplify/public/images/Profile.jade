@@ -1,0 +1,127 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://bootswatch.com/flatly/bootstrap.min.css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title iEvent
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='home.html') iEvent
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='home.html') Home
+            li.active
+              a(href='about.html') About
+            li
+              a(href='index.html') Services
+            li
+              a(href='contact.html') Contact
+        // /.navbar-collapse
+      // /.container
+    // Page Content
+    .container
+      // Page Heading/Breadcrumbs
+      .row
+        .col-lg-12
+          h1.page-header
+            br
+            | Profile
+          ol.breadcrumb
+            li
+              a(href='index.html') Home
+            li.active Services
+      hr
+      .container
+        .row.profile
+          .col-md-3
+            .profile-sidebar
+              // SIDEBAR USERPIC
+              .profile-userpic
+                img.img-responsive(src='Andrew.jpg', alt='')
+              // END SIDEBAR USERPIC
+              // SIDEBAR USER TITLE
+              .profile-usertitle
+                .profile-usertitle-name
+                  | Andrew McCormack
+                .profile-usertitle-job
+                  | Software Developer
+              // END SIDEBAR USER TITLE
+              // SIDEBAR BUTTONS
+              .profile-userbuttons
+                button.btn.btn-success.btn-sm(type='button') Create a New Event
+                button.btn.btn-danger.btn-sm(type='button') Message
+              // END SIDEBAR BUTTONS
+              // SIDEBAR MENU
+              .profile-usermenu
+                ul.nav
+                  li.active
+                    a(href='#')
+                      i.glyphicon.glyphicon-home
+                      |                             Overview
+                  li
+                    a(href='#')
+                      i.glyphicon.glyphicon-user
+                      |                             Account Settings
+                  li
+                    a(href='#', target='_blank')
+                      i.glyphicon.glyphicon-ok
+                      |                             Tasks
+                  li
+                    a(href='#')
+                      i.glyphicon.glyphicon-flag
+                      |                             Help
+              // END MENU
+          .col-md-9
+            .col-md-10.blogShort
+              img.pull-left.img-responsive.thumb.margin10.img-thumbnail(src='D.jpg', alt='post img')
+              h1 My 21st!
+              article
+                p
+                  br
+                  |                          Hey everyone, I'm having my 21st this weekend so I thought I'd celebrate it with a big party! 
+                  br
+                  |                          Date: September 2nd, 2016
+                  br
+                  |  Time: 06:00 PM
+                  br
+                  |  Venue: My house
+              a.btn.btn-blog.pull-right.marginBottom10(href='http://bootsnipp.com/user/snippets/2RoQ') Edit Event
+            .col-md-10.blogShort
+              .container
+                h4 Upcoming Events
+                .row
+                  img.img-rounded(src='band1.jpg', alt='...')
+                  img.img-rounded(src='band2.jpg', alt='...')
+                  img.img-rounded(src='band3.jpg', alt='...')
+                  img.img-rounded(src='band5.jpg', alt='...')
+                  p
+                .row
+                  img.img-rounded(src='band6.jpg', alt='...')
+                  img.img-rounded(src='band4.jpg', alt='...')
+                  img.img-rounded(src='band7.jpg', alt='...')
+      // Footer
+      footer
+        .row
+          .col-lg-12
+            p Copyright © Your Website 2014
+    // /.container
+    // jQuery
+    script(src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')

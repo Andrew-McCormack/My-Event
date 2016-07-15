@@ -11,6 +11,16 @@ router.get('/about', function(req, res, next) {
     res.render('about', { title: 'Express' });
 });
 
+/* GET Checkout Cart page. */
+router.get('/checkoutCart', function(req, res, next) {
+    res.render('checkoutCart', { title: 'Express' });
+});
+
+/* GET About page. */
+router.get('/profile', function(req, res, next) {
+    res.render('profile', { title: 'Express' });
+});
+
 /* GET BirthdayBand page. */
 router.get('/BirthdayBand', function(req, res, next) {
     res.render('BirthdayBand', { title: 'Express' });
@@ -24,6 +34,11 @@ router.get('/BirthdayVenue', function(req, res, next) {
 /* GET Checkout page. */
 router.get('/checkout', function(req, res, next) {
     res.render('checkout', { title: 'Express' });
+});
+
+/* GET Checkout page. */
+router.get('/Profile', function(req, res, next) {
+    res.render('profile', { title: 'Express' });
 });
 
 /* GET CheckoutBirthday page. */
