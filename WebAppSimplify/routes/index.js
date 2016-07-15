@@ -66,11 +66,6 @@ router.get('/checkoutBirthday/paymentpage', function(req, res, next) {
     res.render('paymentpage', { title: 'Express' });
 });
 
-/* GET PaymentSuccessPage page. */
-router.get('/paymentsuccess', function(req, res, next) {
-    res.render('paymentsuccess', { title: 'Express' });
-});
-
 /* GET Services page. */
 router.get('/services', function(req, res, next) {
     res.render('services', { title: 'Express' });
@@ -126,6 +121,10 @@ router.get('/paymentpage', function(req, res) {
     res.render('paymentpage', { title: 'Charge $10 with Simplify Commerce' });
 });
 
+/* GET PaymentSuccessPage page. */
+router.get('/paymentsuccess', function(req, res, next) {
+    res.render('paymentsuccess', { title: 'Payment successfully authorized' });
+});
 
 /* POST to Payment Page */
 router.post('/payment', function(req, res) {
@@ -139,11 +138,11 @@ router.post('/payment', function(req, res) {
     });
  
     client.payment.create({
-      amount : "1000",
+      amount : "23500",
       token : req.body.simplifyToken,
       description : "payment description",
       reference : "7a6ef6be31",
-      currency : "USD"
+      currency : "EUR"
     },
     
     function(errData, data){

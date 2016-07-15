@@ -25,35 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-app.post("/payment", function (req, res) 
-{
-    console.log('Returned from payment page');
-    console.log(req.body.simplifyToken)
-  
-    var Simplify = require("simplify-commerce"),
-    client = Simplify.getClient({
-        publicKey: 'sbpb_YWI3NWQ4MzgtODhmMC00NzgyLTgzNzItYzY0NzZmNjVjYTNl',
-        privateKey: 'PFao6g1E3h+OyReXU9bY0oJXss8oPvHLWWUCW/aNCSB5YFFQL0ODSXAOkNtXTToq'
-    });
- 
-    client.payment.create({
-      amount : "23500",
-      token : req.body.simplifyToken,
-      description : "payment description",
-      reference : "7a6ef6be31",
-      currency : "USD"
-    },
-    
-    function(errData, data){
-    if(errData){
-        console.error("Error Message: " + errData.data.error.message);
-        // handle the error
-        return;
-    }
- 
-    console.log("Payment Status: " + data.paymentStatus);
-  });
-});
+
 
 app.post("/profile", function (req, res) 
 {
